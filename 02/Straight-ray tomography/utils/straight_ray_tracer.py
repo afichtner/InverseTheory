@@ -85,7 +85,7 @@ def compute_ray_path(source, receiver, g):
 
 def plot_ray_density(A, g):
     ray_density = np.sum(A, axis=0)
-    fig = plt.figure(figsize=(15,15))
+    fig = plt.figure(figsize=(12,12))
     ax = fig.add_subplot(111)
     ax.set_title('ray density',pad=15)
     plt.imshow(ray_density.reshape(g.npoints).T, cmap='gray', extent=[g.origin[0],g.origin[0]+ g.npoints[0]*g.spacing[0],g.origin[1],g.origin[1]+g.npoints[1]*g.spacing[1]])
@@ -112,7 +112,7 @@ def get_all_to_all_locations(src_locations, rec_locations):
 
 
 def plot_rays(sources, receivers, g, only_locations=False):
-    fig = plt.figure(figsize=(15,15))
+    fig = plt.figure(figsize=(12,12))
     ax = fig.add_subplot(111)
     if not only_locations:
         for i in range(0,sources.shape[1]):
